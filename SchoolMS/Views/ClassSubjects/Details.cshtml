@@ -1,0 +1,58 @@
+﻿@model SchoolMS.Models.ClassSubject
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="card mb-4 shadow">
+    <div class="card-header">
+        Class Details
+    </div>
+    <div class="card-body">
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Subjects.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Subjects.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ClassSections.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ClassSections.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IsActive)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Users.FullName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Users.FullName)
+            </dd>
+
+        </dl>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ClassSectionID }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    </div>
+</div>
