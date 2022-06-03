@@ -1,0 +1,76 @@
+﻿@model SchoolMS.Models.TimeTable
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="card mb-4 shadow">
+    <div class="card-header">
+        Time Table Details
+    </div>
+    <div class="card-body">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ClassSubjects.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ClassSubjects.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Staffs.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Staffs.Name)
+            </dd>
+
+        
+
+            <dt>
+                @Html.DisplayNameFor(model => model.StartTime)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.StartTime)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EndTitme)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EndTitme)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Day)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Day)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IsActive)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Users.FullName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Users.FullName)
+            </dd>
+        </dl>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.TimeTableID }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    </div>
+</div>

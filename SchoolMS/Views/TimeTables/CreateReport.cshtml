@@ -1,0 +1,86 @@
+﻿@model IEnumerable<SchoolMS.Models.Staff>
+
+@{
+    ViewBag.Title = "CreateReport";
+}
+
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Time Table By Staff</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Designations.Name)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.ContactNo)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.BasicSalary)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.EmailAddress)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.HomePhone)
+                        </th>
+
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Designations.Name)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ContactNo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.BasicSalary)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmailAddress)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.HomePhone)
+                            </td>
+
+                            <td class="btn-group"> 
+                              
+                                <button class='btn btn-danger js-Print' data-customer-id=@item.StaffID>Preview</button>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+            </table>
+           
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script>
+    $(function () {
+        $("#dataTable").on("click",".js-Print", function () {
+            var url = "/TimeTables/Download_PDF/" + $(this).attr("data-customer-id");
+            window.open(url, "_blank");
+        });
+    });
+</script>

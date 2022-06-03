@@ -1,0 +1,206 @@
+﻿@model SchoolMS.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="card mb-4 shadow">
+    <div class="card-header">
+        Student Details
+    </div>
+    <div class="card-body">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Gendertbls.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Gendertbls.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Users.FullName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Users.FullName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateOfBirth)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CNIC)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CNIC)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Nationality)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nationality)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Religion)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Religion)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TribeOrCast)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TribeOrCast)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ContactNo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ContactNo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EmailAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Photo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Photo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PreviousSchool)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PreviousSchool)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PrivousPercentage)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PrivousPercentage)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TempAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TempAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PermAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PermAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AddmissionDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AddmissionDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FatherName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FatherName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FCNIC)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FCNIC)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FatherGaurdianOccupation)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FatherGaurdianOccupation)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FatherGaurdianPostalAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FatherGaurdianPostalAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OfficePhone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OfficePhone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ResidentPhone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ResidentPhone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IsActive)
+            </dd>
+
+        </dl>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.StudentID }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    </div>
+</div>
+

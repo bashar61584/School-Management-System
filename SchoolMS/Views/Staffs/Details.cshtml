@@ -1,0 +1,174 @@
+﻿@model SchoolMS.Models.Staff
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<div class="card mb-4 shadow">
+    <div class="card-header">
+        Staff  Details
+    </div>
+    <div class="card-body">
+        <dl class="dl-horizontal">
+            <dd>
+                @if (!String.IsNullOrEmpty(Model.Photo))
+                {
+                    <img src="@Url.Content(Model.Photo)" alt="Image" style="width:160px;height:220px;max-width:100%;height:auto;" />
+                }
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Designations.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Designations.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Gendertbls.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Gendertbls.Name)
+            </dd>
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ContactNo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ContactNo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BasicSalary)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BasicSalary)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EmailAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Qualification)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Qualification)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.HomePhone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.HomePhone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Doyouhaveanydisability)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Doyouhaveanydisability)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Ifdisabilityyesthengiveusdetails)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Ifdisabilityyesthengiveusdetails)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Areyoutakinganymedication)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Areyoutakinganymedication)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Ifmedicationyesthengiveusdetail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Ifmedicationyesthengiveusdetail)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AnyCriminaloffenceagain)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AnyCriminaloffenceagain)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Ifcriminaloffenceyesgiveusdetails)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Ifcriminaloffenceyesgiveusdetails)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.RegistrationDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RegistrationDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IsActive)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Users.FullName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Users.FullName)
+            </dd>
+
+        </dl>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.StaffID }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    </div>
+</div>

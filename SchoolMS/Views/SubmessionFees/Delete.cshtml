@@ -1,0 +1,77 @@
+﻿@model SchoolMS.Models.SubmessionFee
+
+@{
+    ViewBag.Title = "Delete";
+}
+<div class="card mb-4 shadow">
+    <div class="card-header">
+        Are you sure you want to delete this?
+    </div>
+    <div class="card-body">
+
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.StudentPromotes.Students.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.StudentPromotes.Students.Name) ( @Html.DisplayFor(model => model.StudentPromotes.Students.StudentID) )
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.StudentPromotes.Annuals.Title)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.StudentPromotes.Annuals.Title)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthsModels.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MonthsModels.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Amount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Amount)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SubmissionDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SubmissionDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Users.FullName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Users.FullName)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Delete" class="btn btn-danger" />
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
